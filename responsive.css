@@ -1,0 +1,137 @@
+@media (max-width: 768px) {
+  section {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  section img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  section .text-content {
+    width: 100%;
+  }
+
+  section h2 {
+    font-size: 24px;
+  }
+
+  section p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 15px;
+    gap: 15px;
+  }
+
+  section h2 {
+    font-size: 20px;
+  }
+
+  section p {
+    font-size: 14px;
+  }
+
+  li {
+    margin-left: 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contenedor {
+    padding: 0 15px;
+  }
+
+  .form-busqueda {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .form-busqueda input {
+    width: 100%;
+  }
+
+  .form-busqueda button {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .tarjeta {
+    padding: 15px;
+  }
+
+  .tarjeta img {
+    float: none;
+    display: block;
+    margin: 12px auto 0;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .tarjeta p,
+  .tarjeta .comando {
+    max-width: 100%;
+  }
+
+  .acciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: flex-start;
+  }
+
+  .acciones button {
+    flex: 1 1 45%;
+    margin-bottom: 8px;
+  }
+
+  .buscador input {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+
+  .buscador button {
+    width: 90%;
+  }
+
+  #modal-comando .modal-contenido {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .paginacion a,
+  .paginacion span {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 22px;
+  }
+
+  .tarjeta h3 {
+    font-size: 16px;
+  }
+
+  .tarjeta p,
+  .tarjeta .comando {
+    font-size: 13px;
+  }
+
+  form button[type="submit"] {
+    font-size: 14px;
+    padding: 8px 18px;
+  }
+
+  .btn-copiar {
+    font-size: 0.75em;
+    padding: 4px 8px;
+  }
+}

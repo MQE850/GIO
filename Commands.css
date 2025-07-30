@@ -1,0 +1,372 @@
+.contenedor {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #081032;
+      margin-top: 20px;
+    }
+
+    /* Botones */
+    button {
+      cursor: pointer;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      user-select: none;
+    }
+    .btn-agregar {
+      background-color: #081032;
+      color: white;
+      box-shadow: 0 3px 8px rgba(84, 76, 175, 0.4);
+      margin-bottom: 20px;
+    }
+    .btn-agregar:hover {
+      background-color: #fff;
+      color: #081032;
+      border: #081032;
+    }
+    .acciones button {
+      margin-right: 8px;
+      padding: 6px 12px;
+      border-radius: 5px;
+      font-size: 13px;
+      font-weight: 600;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      color: white;
+    }
+    .acciones button.editar {
+      background-color: #081032;
+    }
+    .acciones button.editar:hover {
+      background-color: #fff;
+      color: #081032;
+    }
+    .acciones button.eliminar {
+      background-color: #081032;
+    }
+    .acciones button.eliminar:hover {
+      background-color: #fff;
+      color: #081032
+    }
+
+    /* Tarjetas */
+    .tarjeta {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      padding: 15px 20px;
+      margin-bottom: 16px;
+      position: relative;
+    }
+
+    .tarjeta img {
+      min-width: 240px;
+      min-height: 150px;
+      max-width: 240px;
+      max-height: 150px;
+      float: right;
+      /*margin-top: -25px;
+      border-radius: 6px;
+      margin-left: 10px;*/
+    }
+    .tarjeta h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      color: #333;
+    }
+    .tarjeta p {
+      font-size: 14px;
+      color: #555;
+      white-space: pre-wrap;
+      max-width: 600px;
+    }
+    .tarjeta .comando {
+      font-family: monospace;
+      background: #bdbce2;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 8px;
+      width: 100%;
+      max-width: 600px;
+      color: #222;
+      white-space: pre-wrap;     /* Permite saltos de línea */
+      word-break: break-word;    /* Rompe palabras largas si es necesario */
+      overflow-wrap: break-word;
+    }
+
+    .info-creador {
+      font-size: 11px;
+      color: #888;
+      margin-top: 12px;
+    }
+
+    /* Modal */
+    #modal-comando {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.4);
+      align-items: center;
+      justify-content: center;
+    }
+    #modal-comando .modal-contenido {
+      background: white;
+      border-radius: 10px;
+      padding: 25px 30px;
+      width: 400px;
+      max-width: 95%;
+      position: relative;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+    #modal-comando .modal-contenido h2 {
+      margin-top: 0;
+      margin-bottom: 18px;
+      font-weight: 700;
+      color: #222;
+    }
+    #cerrar-modal {
+      position: absolute;
+      right: 12px;
+      top: 10px;
+      background: #081032;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 28px;
+      height: 28px;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 24px;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease;
+    }
+    #cerrar-modal:hover {
+      background: #081032;
+    }
+
+    /* Form */
+    form label {
+      display: flex;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #444;
+      margin-top: 12px;
+    }
+    form input[type="text"], form textarea, form input[type="file"] {
+      width: 100%;
+      padding: 8px 10px;
+      font-size: 14px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      resize: vertical;
+      box-sizing: border-box;
+    }
+    form textarea {
+      min-height: 80px;
+    }
+
+    form button[type="submit"] {
+      background-color: #081032;
+      color: white;
+      padding: 10px 22px;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: 700;
+      box-shadow: 0 4px 12px rgba(63, 81, 181, 0.4);
+      border: none;
+      margin-top: 16px;
+      width: 100%;
+    }
+    form button[type="submit"]:hover {
+      background-color: #fff;
+      color: #081032;
+    }
+.buscador {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-busqueda {
+  display: flex;
+  align-items: end;
+  gap: 8px;
+}
+
+.form-busqueda input {
+  padding: 6px 12px;
+  width: 400px;
+  max-width: 90%;
+  height: 39px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.form-busqueda button {
+  padding: 6px 12px;
+  background: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 75px;
+  max-width: 20%;
+}
+
+ .paginacion { text-align: center; margin-top: 20px; }
+    .paginacion a, .paginacion span {
+      margin: 0 5px; padding: 8px 12px; background: #f0f0f0; border-radius: 5px;
+      text-decoration: none; color: #000;
+    }
+    .paginacion .actual { background-color: #007BFF; color: white; font-weight: bold; }
+    .buscador { margin-bottom: 20px; text-align: center; }
+    .buscador input { padding: 8px; width: 60%; border-radius: 5px; border: 1px solid #ccc; }
+    .buscador button { padding: 8px 16px; background: #007BFF; color: #fff; border: none; border-radius: 5px; }
+
+    .comando {
+      background-color: #1e1e1e;
+      color: #00ff00;
+      font-family: monospace;
+      padding: 10px;
+      border-radius: 5px;
+      position: relative;
+      white-space: pre-wrap;
+    }
+    .btn-copiar {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.9em;
+    }
+    .btn-copiar:hover {
+      background-color: #555;
+    }
+@media (max-width: 768px) {
+  .contenedor {
+    padding: 0 15px;
+  }
+
+  .form-busqueda {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .form-busqueda input,
+  .form-busqueda button {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .tarjeta {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .tarjeta img {
+    float: none;
+    display: block;
+    margin: 10px auto;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .tarjeta p,
+  .tarjeta .comando {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  .acciones {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .acciones button {
+    width: 100%;
+  }
+
+  #modal-comando .modal-contenido {
+    width: 95%;
+    padding: 20px;
+  }
+
+  form button[type="submit"] {
+    width: 100%;
+  }
+
+  .buscador input {
+    width: 90%;
+  }
+
+  .paginacion a,
+  .paginacion span {
+    padding: 6px 10px;
+    margin: 3px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 22px;
+  }
+
+  .btn-agregar {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+
+  .form-busqueda input {
+    font-size: 14px;
+  }
+
+  .form-busqueda button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .comando {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .btn-copiar {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  form input[type="text"],
+  form textarea,
+  form input[type="file"] {
+    font-size: 13px;
+  }
+
+  form label {
+    font-size: 13px;
+  }
+
+  .tarjeta h3 {
+    font-size: 16px;
+  }
+
+  .tarjeta p {
+    font-size: 13px;
+  }
+}

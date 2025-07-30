@@ -1,0 +1,272 @@
+.contenedor {
+    max-width: 1600px;
+    margin: auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #081032;
+}
+
+/* Grid de tarjetas: máximo 5 por fila, adaptable */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 tarjetas por fila */
+    gap: 25px;
+    padding: 5px;
+}
+
+/* Responsive: menos columnas en pantallas más chicas */
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tarjeta flip */
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  aspect-ratio: 3 / 4; /* Proporción vertical */
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 90%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Frente y reverso */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* Frente */
+.flip-card-front {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  text-align: center;
+}
+
+.flip-card-front img {
+  width: 100%;
+  max-height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.flip-card-front h3 {
+  margin: 1rem 0 5px;
+  font-size: 1.1rem;
+  color: black !important;
+}
+
+.subtitulo {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: -5px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+/* Reverso */
+.flip-card-back {
+  background: #2c3e50;
+  color: white;
+  transform: rotateY(180deg);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Para separar contenido y acciones */
+  text-align: center;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.flip-card-back h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.flip-card-back p {
+  font-size: 0.95rem;
+  line-height: 1.3;
+}
+
+/* Botones de acciones centrados y estilizados */
+.acciones {
+  margin-top: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.acciones button {
+  padding: 8px 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  background-color: #4869ff;
+  color: white;
+}
+
+.acciones button:hover {
+  background-color: #fff;
+  color: #081032;
+  border: 1px solid #081032;
+}
+
+/* Botón agregar centrado arriba */
+.btn-agregar {
+    display: block;
+    margin: 0 auto 20px;
+    padding: 10px 20px;
+    background-color: #081032;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-agregar:hover {
+    background-color: #fff;
+    color: #081032;
+    border: 1px solid #081032;
+}
+
+/* Modal para formularios */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 999; 
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-contenido {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+}
+
+.modal-contenido input,
+.modal-contenido textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+.cerrar {
+    position: absolute;
+    top: 10px; right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Estilo para contenedor de botones dentro del popup */
+.modal-contenido .botones-popup {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+/* Botones dentro del popup */
+.modal-contenido .botones-popup button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  background-color: #081032;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover para botones del popup */
+.modal-contenido .botones-popup button:hover {
+  background-color: #fff;
+  color: #081032;
+  border: 1px solid #081032;
+}
+/* Responsive: menos columnas en pantallas más chicas */
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* Responsive modal */
+@media (max-width: 480px) {
+  .modal-content {
+    width: 95%;
+    padding: 16px;
+  }
+
+  .modal-content input,
+  .modal-content textarea,
+  .modal-content select {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .modal-content button {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+  }
+}

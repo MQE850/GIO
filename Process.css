@@ -1,0 +1,383 @@
+#processFormContainer { background: white; color: black; padding: 20px; border-radius: 10px; margin-top: 20px; }
+.tag { display: inline-block; background: #f0f0f0; color: #000; padding: 5px 10px; margin: 2px; border-radius: 20px; }
+.tag .remove-tag { margin-left: 5px; cursor: pointer; }
+.dropdown-container { position: relative;}
+.dropdown-options { display: none; position: absolute; background: #fff; color:black; border: 1px solid #ccc; padding: 10px; z-index: 1000; }
+.dropdown-display { background: #eee; padding: 10px; cursor: pointer; }
+
+.search-input {
+  border-radius: 999px;
+  border: 1px solid #ccc;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  box-shadow: none;
+  transition: box-shadow 0.3s;
+}
+
+.search-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(30, 42, 120, 0.3);
+}
+
+.search-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  pointer-events: none;
+}
+
+.clear-btn {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #888;
+  font-size: 18px;
+}
+
+
+.tarjeta {
+  background: linear-gradient(135deg, #1e2a78, #2b3b90);
+  color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  padding: 20px;
+  margin: 10px;
+  width: 250px;
+  display: inline-block;
+  vertical-align: top;
+  font-family: 'Segoe UI', sans-serif;
+  position: relative;
+}
+
+.tarjeta h5 {
+  margin: 0 0 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.tarjeta .badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: #00d1b2;
+  color: #043f3a;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.tarjeta .info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  margin-top: 15px;
+  background: rgba(0, 0, 0, 0.15);
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#processViewCard {
+  background: white;
+  color: black;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+#processView {
+  display: none;
+  padding: 40px 20px;
+}
+
+#processView .tag {
+  background-color: white;
+  color: #1e2a78;
+  padding: 4px 10px;
+  margin-right: 5px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.filter-panel {
+  background-color: #1e2a78;
+  color: white;
+  border-radius: 12px;
+}
+
+.generation-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+  gap: 8px;
+}
+
+.generation-grid .generation-btn {
+  width: 100%;
+  border-radius: 8px;
+  text-align: center;
+  padding: 6px 0;
+  font-weight: 500;
+}
+
+#generationFilters button {
+  background-color: #00d1b2;
+  border: none;
+  color: #043f3a;
+  padding: 4px 10px;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: 0.2s ease;
+}
+
+#generationFilters button.active {
+  background-color: #043f3a;
+  color: white;
+}
+
+#pagination {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+#pagination button {
+  background-color: #1e2a78;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  margin: 0 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#pagination button:hover {
+  background-color: #2b3b90;
+}
+
+#pagination button.active {
+  background-color: #00d1b2;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  #processFormContainer {
+    padding: 15px;
+    margin: 10px;
+    border-radius: 8px;
+  }
+
+  .tarjeta {
+    width: 100%;
+    margin: 10px 0;
+    display: block;
+  }
+
+  .tarjeta .info {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  #processViewCard {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .search-input {
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .search-icon {
+    left: 10px;
+  }
+
+  .clear-btn {
+    right: 10px;
+  }
+
+  .dropdown-options {
+    position: static;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .dropdown-display {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 480px) {
+  #processFormContainer {
+    padding: 10px;
+  }
+
+  #pagination button {
+    margin: 4px 2px;
+    padding: 4px 8px;
+    font-size: 0.8rem;
+  }
+
+  #processView {
+    padding: 20px 10px;
+  }
+}
+@media (max-width: 768px) {
+  #processFormContainer form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  #processFormContainer label,
+  #processFormContainer input,
+  #processFormContainer select,
+  #processFormContainer textarea,
+  #processFormContainer .ql-container {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #processFormContainer input[type="checkbox"] {
+    width: auto;
+  }
+
+  #processFormContainer .form-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #processFormContainer .form-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+
+  #processFormContainer .form-actions button {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  #processFormContainer {
+    padding: 15px;
+    margin: 10px;
+    border-radius: 8px;
+  }
+
+  .tarjeta {
+    width: 100%;
+    margin: 10px 0;
+    display: block;
+  }
+
+  .tarjeta .info {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  #processViewCard {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .search-input {
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .search-icon {
+    left: 10px;
+  }
+
+  .clear-btn {
+    right: 10px;
+  }
+
+  .dropdown-options {
+    position: static;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .dropdown-display {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #processFormContainer form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  #processFormContainer label,
+  #processFormContainer input,
+  #processFormContainer select,
+  #processFormContainer textarea,
+  #processFormContainer .ql-container {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #processFormContainer input[type="checkbox"] {
+    width: auto;
+  }
+
+  #processFormContainer .form-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #processFormContainer .form-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+
+  #processFormContainer .form-actions button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  #processFormContainer {
+    padding: 10px;
+  }
+
+  #pagination button {
+    margin: 4px 2px;
+    padding: 4px 8px;
+    font-size: 0.8rem;
+  }
+
+  #processView {
+    padding: 20px 10px;
+  }
+}

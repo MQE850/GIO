@@ -1,0 +1,520 @@
+:root {
+    --azul-claro: #005f99;
+    --azul-oscuro: #081032;
+    --azul-pastel: #87cefa;
+    --azul-turqueza: #4d9db8;
+    --blanco: #ffffff;
+    --negro: #000;
+    --gris-claro: #ccc;
+    --gris-oscuro: #333;
+  } 
+/*Main*/
+  .manual-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 4rem 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .text-content {
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .text-content h1 {
+    font-size: 3rem;
+    color: var(--azul-oscuro);
+    margin-bottom: 1rem;
+  }
+  
+  .text-content p {
+    font-size: 1.2rem;
+    color: var(--gris-oscuro);
+    margin-bottom: 1.5rem;
+  }
+  
+  .listen-btn {
+    padding: 0.8rem 1.5rem;
+    background-color: var(--azul-oscuro);
+    color: var(--blanco);
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .listen-btn:hover {
+    background-color: var(--azul-claro);
+  }
+  
+  .image-content {
+    flex: 1;
+    text-align: right;
+    min-width: 250px;
+  }
+  
+  .image-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  
+/*Sección de Generaciones*/
+.generaciones {
+    margin-top: 4rem;
+    text-align: center;
+    animation: fadeIn 1.5s ease;
+  }
+  
+  .generaciones h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--azul-oscuro);
+  }
+  
+  .generacion-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+  .generacion-card {
+    background-color: var(--azul-oscuro);
+    border-radius: 20px;
+    padding: 3rem;
+    max-width: 300px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .generacion-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .generacion-card img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+  }
+  
+  .generacion-card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    color: var(--blanco);
+  }
+  
+  .generacion-card p {
+    font-size: 0.95rem;
+    color: var(--blanco);
+    margin-bottom: 1rem;
+  }
+  
+  .boton-escuchar {
+    padding: 0.6rem 1.2rem;
+    border: 2px solid var(--blanco);
+    border-radius: 30px;
+    text-decoration: none;
+    color: var(--blanco);
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  .boton-escuchar:hover {
+    background-color: var(--blanco);
+    color: var(--negro);
+  }
+  /*Sección de Procesos*/
+  .procesos-section {
+    background-image: url('../img/proceso.jpg'); /* Cambia a la imagen deseada */
+    background-size: cover;
+    background-position: center;
+    padding: 6rem 2rem;
+    margin-top: 2rem;
+    position: relative;
+    text-align: center;
+    color: var(--blanco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .procesos-overlay {
+    background-color: rgba(255, 255, 255, 0.9); 
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    animation: fadeIn 1.5s ease;
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  .procesos-overlay h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: var(--azul-oscuro);
+  }
+  
+  .procesos-overlay p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: #081032;
+  }
+  
+  .btn-procesos {
+    padding: 0.8rem 1.6rem;
+    background-color: transparent;
+    border: 2px solid var(--azul-oscuro);
+    color: var(--azul-oscuro);
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-procesos:hover {
+    background-color: var(--azul-oscuro);
+    color: var(--blanco);
+  }
+
+  /*Sección de Conceptos*/
+  .conceptos-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 2rem;
+    background-color: var(--azul-oscuro); 
+    flex-wrap: wrap;
+  }
+  
+  .conceptos-texto {
+    flex: 1;
+    max-width: 500px;
+    margin-left: 100px;
+  }
+  
+  .conceptos-texto h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--blanco);
+    margin-bottom: 1rem;
+  }
+  
+  .conceptos-texto p {
+    font-size: 1.1rem;
+    color: #fff;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+  
+  .btn-ir {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--gris-claro);
+    border: #ffffff;
+    color: var(--blanco);
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-ir:hover {
+    background-color: var(--blanco);
+    border: var(--azul-oscuro);
+    color: var(--azul-oscuro);
+  }
+
+  .conceptos-imagen {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .conceptos-imagen img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  
+/*Sección de Comandos*/
+  .comandos-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 2rem;
+    background-color: var(--gris-claro); 
+    flex-wrap: wrap;
+    margin-left: -50px;
+  }
+  
+  .comandos-texto {
+    flex: 1;
+    max-width: 500px;
+    margin-right: 100px;
+    color: var(--azul-oscuro);
+  }
+  
+  .comandos-texto h2 {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--negro);
+    margin-bottom: 1rem;
+  }
+  
+  .comandos-texto p {
+    font-size: 1.1rem;
+    color: var(--negro-bajo);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+  
+  .btn-ir {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--azul-oscuro);
+    color:  var(--blanco);
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-ir:hover {
+    background-color: var(--blanco);
+    color: var(--azul-oscuro);
+  }
+  
+  .comandos-imagen {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .comandos-imagen img {
+    max-width: 100%;
+    border-radius: 10px;
+  }  
+  
+  .user-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .logo {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: var(--blanco);
+  }
+
+  .logo img {
+    height: auto;
+    width: 15%;
+    display: block;
+  }
+
+  .bottom-banner {
+    background-color: var(--blanco);
+    color: var(--azul-oscuro);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 2rem 1rem;
+    border-top: 2px solid var(--gris-claro);
+    animation: fadeIn 1.2s ease;
+  }  
+  
+  /* Animaciones */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideDown {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+  }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(30px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+
+  @media (max-width: 768px) {
+
+    /* Header */
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  
+    .logo img {
+      width: 30%;
+    }
+  
+    /* Sección de Generaciones */
+    .generacion-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .generacion-card {
+      width: 90%;
+      padding: 2rem;
+    }
+  
+    /* Sección de Procesos */
+    .procesos-section {
+      padding: 4rem 1rem;
+    }
+  
+    .procesos-overlay {
+      padding: 2rem 1rem;
+    }
+  
+    .procesos-overlay h2 {
+      font-size: 1.5rem;
+    }
+  
+    .procesos-overlay p {
+      font-size: 1rem;
+    }
+  
+    .btn-procesos {
+      padding: 0.6rem 1.2rem;
+      font-size: 0.95rem;
+    }
+  
+    /* Sección de Conceptos */
+    .conceptos-section {
+      flex-direction: column;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+  
+    .conceptos-texto {
+      margin-left: 0;
+      max-width: 100%;
+      margin-bottom: 2rem;
+    }
+    
+    .bottom-banner {
+        font-size: 1.2rem;
+        padding: 1.5rem 1rem;
+      }
+      
+    .conceptos-texto h2 {
+      font-size: 2.2rem;
+    }
+  
+    .conceptos-texto p {
+      font-size: 1rem;
+    }
+  
+    .conceptos-imagen img {
+      max-width: 100%;
+    }
+  
+    /* Sección de Comandos */
+    .comandos-section {
+      flex-direction: column;
+      text-align: center;
+      margin-left: 0;
+      padding: 3rem 1rem;
+    }
+  
+    .comandos-texto {
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: 2rem;
+    }
+  
+    .comandos-texto h2 {
+      font-size: 2.2rem;
+    }
+  
+    .comandos-texto p {
+      font-size: 1rem;
+    }
+  
+    .comandos-imagen img {
+      max-width: 100%;
+    }
+  
+    /* Manual o sección principal con imagen + texto */
+    main {
+      flex-direction: column;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+  
+    .text-content {
+      max-width: 100%;
+      margin-bottom: 2rem;
+    }
+  
+    .text-content h1 {
+      font-size: 2.2rem;
+    }
+  
+    .text-content p {
+      font-size: 1rem;
+    }
+  
+    .image-content img {
+      max-width: 90%;
+    }
+  
+    /* Botones generales */
+    .listen-btn,
+    .btn-ir,
+    .btn-procesos,
+    .boton-escuchar {
+      padding: 0.6rem 1.2rem;
+      font-size: 0.95rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .manual-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .image-content {
+      text-align: center;
+      margin-top: 2rem;
+    }
+  
+    .text-content h1 {
+      font-size: 2rem;
+    }
+  
+    .text-content p {
+      font-size: 1rem;
+    }
+  }
+  

@@ -1,0 +1,70 @@
+:root {
+  --azul-claro: #005f99;
+  --azul-oscuro: #081032;
+  --azul-pastel: #87cefa;
+  --azul-turqueza: #4d9db8;
+  --blanco: #ffffff;
+  --negro: #000;
+  --gris-claro: #f2f2f2;
+  --gris-oscuro: #333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--gris-claro);
+  color: var(--negro);
+  line-height: 1.6;
+  animation: fadeIn 1.5s ease-in;
+  height: 100%;
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsivo: base */
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+
+  body {
+    padding: 0 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+
+  body {
+    padding: 0 0.5rem;
+  }
+}

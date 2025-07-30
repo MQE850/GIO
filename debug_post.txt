@@ -1,0 +1,13 @@
+Array
+(
+    [id] => 
+    [mod_date] => 
+    [contributor] => 
+    [title] => 1
+    [description] => <p>1</p>
+    [tags] => 
+    [generation_combined] => GEN8
+    [documentURL] => 
+    [exec_time] => 
+    [tipo] => prueba
+)

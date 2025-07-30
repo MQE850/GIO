@@ -1,0 +1,102 @@
+:root {
+    --azul-claro: #005f99;
+    --azul-oscuro: #081032;
+    --azul-pastel: #87cefa;
+    --azul-turqueza: #4d9db8;
+    --blanco: #ffffff;
+    --negro: #000;
+    --gris-claro: #ccc;
+    --gris-oscuro: #333;
+  }
+  
+  /* --- FOOTER --- */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  background-color: #081032;
+  color: var(--blanco);
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-left a,
+.footer-center button,
+.footer-right p {
+  display: block;
+  margin: 6px 0;
+  color: var(--blanco);
+  text-decoration: none;
+}
+
+.footer-left a:hover {
+  color: var(--azul-turqueza);
+}
+
+.footer-center button {
+  background-color: var(--blanco);
+  color: var(--azul-oscuro);
+  border-radius: 6px;
+  height: 30px;
+  width: 250px;
+  border: none;
+  cursor: pointer;
+}
+
+.footer-center button:hover {
+  background-color: var(--azul-turqueza);
+  color: var(--azul-oscuro);
+}
+/* Variables: puedes cambiar tamaños o colores por resolución si necesitas */
+@media (max-width: 768px) {
+  :root {
+    --azul-pastel: #b0dfff; /* Más claro en móviles si se desea */
+  }
+}
+
+/* Responsive FOOTER */
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px 5px;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    flex: none;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .footer-center button {
+    width: 90%;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-center button {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .footer-left a,
+  .footer-right p {
+    font-size: 14px;
+  }
+}
+
+

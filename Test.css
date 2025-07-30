@@ -1,0 +1,171 @@
+body {
+  background-color: #ccc;
+  color: white;
+}
+
+#tagContainer,
+#editTagContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 5px;
+}
+
+/* Chip visual para cada etiqueta */
+.tag-chip {
+  background-color: #007bff;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  max-width: 160px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.tag-chip .remove-tag {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  margin-left: 6px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.tag-chip:hover {
+  background-color: #0056b3;
+}
+
+.dropdown-container {
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  background: #f8f9fa;
+  padding: 5px;
+}
+
+.dropdown-display {
+  cursor: pointer;
+  padding: 6px 10px;
+  border: 1px solid #999;
+  border-radius: 4px;
+  background-color: white;
+  color: black;
+}
+
+.dropdown-options {
+  display: none;
+  background-color: white;
+  padding: 10px;
+  border: 1px solid #999;
+  border-radius: 4px;
+  margin-top: 4px;
+}
+
+.dropdown-container.active .dropdown-options {
+  display: block;
+}
+
+.search-icon {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  color: gray;
+}
+
+.clear-btn {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 20px;
+  cursor: pointer;
+  color: red;
+}
+
+#viewDescription {
+  background-color: #f8f9fa;
+  color: #212529;
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+#viewDescription h1,
+#viewDescription h2,
+#viewDescription h3,
+#viewDescription h4,
+#viewDescription h5,
+#viewDescription h6 {
+  font-weight: bold;
+  color: #1e2a78;
+  margin: 6px 0 8px;
+}
+
+#viewDescription p {
+  margin-bottom: 10px;
+}
+
+#viewDescription ul,
+#viewDescription ol {
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+#viewDescription li {
+  margin-bottom: 5px;
+}
+
+#viewDescription a {
+  color: #2b3b90;
+  text-decoration: underline;
+}
+
+#viewDescription strong {
+  font-weight: bold;
+}
+
+#viewDescription em {
+  font-style: italic;
+}
+
+#viewDescription pre {
+  background-color: #e9ecef;
+  padding: 10px;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+
+#viewDescription code {
+  background-color: #f1f3f5;
+  color: #212529;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-family: 'Fira Code', 'Courier New', monospace;
+  font-size: 0.95em;
+  display: inline-block;
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.1);
+  white-space: pre-wrap;
+}
+
+.fade-slide-in {
+  animation: fadeInSlide 0.3s ease-in-out;
+}
+
+@keyframes fadeInSlide {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
